@@ -7,7 +7,7 @@
 
   <groupId>com.example</groupId>
   <artifactId>java-maven-junit-helloworld</artifactId>
-  <version>1.0.${v}</version>
+  <version>1.0.${BuildNumber}</version>
   <packaging>jar</packaging>
 
   <properties>
