@@ -104,15 +104,17 @@
                    <format>html</format>
                    <format>xml</format>
                </formats>
-            </configuration>
-     <!-- </plugin>
+        </configuration>
+     </plugin>
     </plugins>
+  </reporting> 
+ <reporting>
     <plugins>
-      <plugin>-->
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>surefire-report-maven-plugin</artifactId>
       </plugin>
     </plugins>
-  </reporting> 
+  </reporting>
 
 </project>
