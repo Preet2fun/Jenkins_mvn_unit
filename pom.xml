@@ -105,10 +105,10 @@
                    <format>xml</format>
                </formats>
             </configuration>
-      </plugin>
+     <!-- </plugin>
     </plugins>
     <plugins>
-      <plugin>
+      <plugin>-->
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>surefire-report-maven-plugin</artifactId>
       </plugin>
