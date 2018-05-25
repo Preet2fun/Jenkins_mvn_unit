@@ -97,6 +97,7 @@
       <plugin>
         <!-- JUnit code coverage. -->
         <groupId>org.codehaus.mojo</groupId>
+        <artifactId>surefire-report-maven-plugin</artifactId>
         <artifactId>cobertura-maven-plugin</artifactId>
         <version>2.6</version>
 	<configuration>
@@ -106,14 +107,6 @@
                </formats>
         </configuration>
      </plugin>
-    </plugins>
-  </reporting> 
- <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>surefire-report-maven-plugin</artifactId>
-      </plugin>
     </plugins>
   </reporting>
 
