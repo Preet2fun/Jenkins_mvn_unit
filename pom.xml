@@ -7,7 +7,7 @@
 
   <groupId>com.example</groupId>
   <artifactId>java-maven-junit-helloworld</artifactId>
-  <version>1.0.${BuildNumber}</version>
+  <version>1.0-1</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -19,7 +19,7 @@
      <cobertura.version>2.5.2</cobertura.version>
   </properties>
 
-  <dependencies>
+    <dependencies>
     <!-- Testing dependencies. -->
     <dependency>
       <groupId>junit</groupId>
@@ -27,7 +27,7 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-    <!--dependency>
+    <dependency>
       <groupId>org.powermock</groupId>
       <artifactId>powermock-module-junit4</artifactId>
       <version>1.5.1</version>
@@ -43,34 +43,19 @@
       <groupId>com.github.stefanbirkner</groupId>
       <artifactId>system-rules</artifactId>
       <version>1.4.0</version>
-      <scope>test</scope-->
+      <scope>test</scope>
       <!-- junit:junit-dep is deprecated, and junit:junit replaces it. -->
-      <!--exclusions>
+      <exclusions>
         <exclusion>
           <groupId>junit</groupId>
           <artifactId>junit-dep</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
-  </dependencies-->
+  </dependencies>
 
-<build>
+  <build>
     <plugins>
-        <plugin>
-           <groupId>org.codehaus.mojo</groupId>
-           <artifactId>findbugs-maven-plugin</artifactId>
-           <version>${findbugs.version}</version>
-        </plugin>
-        <plugin>
-           <groupId>org.codehaus.mojo</groupId>
-           <artifactId>cobertura-maven-plugin</artifactId>
-           <version>${cobertura.version}</version>
-           <configuration>
-               <formats>
-                   <format>xml</format>
-               </formats>
-           </configuration>
-        </plugin>
       <plugin>
         <!-- Configures the compiler. -->
         <groupId>org.apache.maven.plugins</groupId>
@@ -90,26 +75,25 @@
         <!-- Integration tests are run during the test phase. -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.18.1</version>
-      </plugin>
-      <!--plugin>
-        <!-- Integration tests are run by failsafe. -->
-        <!-- Classes under src/test/java called *IT are included automatically. -->
-        <!-- Integration tests are run during the verify phase. >
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
         <version>2.16</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin-->
-    </plugins>
-</build>
+        </plugin>
+        <plugin>
+           <groupId>org.codehaus.mojo</groupId>
+           <artifactId>findbugs-maven-plugin</artifactId>
+           <version>${findbugs.version}</version>
+        </plugin>
+        <plugin>
+           <groupId>org.codehaus.mojo</groupId>
+           <artifactId>cobertura-maven-plugin</artifactId>
+           <version>${cobertura.version}</version>
+           <configuration>
+               <formats>
+                   <format>xml</format>
+               </formats>
+           </configuration>
+        </plugin>
+     </plugins>
+  </build>
 
   <reporting>
      <plugins>
@@ -141,5 +125,4 @@
         </plugin>
       </plugins>
    </reporting>
-
 </project>
